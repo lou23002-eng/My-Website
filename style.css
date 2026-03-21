@@ -1,13 +1,13 @@
 :root {
-	--bg: #f7f9fc;
+	--bg: #e9f5ff;
 	--surface: #ffffff;
-	--surface-alt: #f1f5fb;
-	--text: #0f172a;
-	--muted: #475569;
-	--primary: #0b3a8f;
-	--primary-dark: #082d6f;
-	--line: #dbe4f2;
-	--shadow: 0 12px 28px rgba(15, 23, 42, 0.09);
+	--surface-alt: #dbe7f6;
+	--text: #143253;
+	--muted: #4f6987;
+	--primary: #57a8ea;
+	--primary-dark: #3f93d8;
+	--line: #cfe0f1;
+	--shadow: 0 12px 28px rgba(37, 80, 124, 0.14);
 	--radius: 16px;
 	--radius-sm: 12px;
 	--container: 1140px;
@@ -26,8 +26,9 @@ body {
 	font-family: "Manrope", sans-serif;
 	color: var(--text);
 	background:
-		radial-gradient(circle at 10% -20%, #dce9ff 0%, transparent 40%),
-		radial-gradient(circle at 90% 0%, #ebf2ff 0%, transparent 35%),
+		radial-gradient(circle at 8% -20%, #cce9ff 0%, transparent 42%),
+		radial-gradient(circle at 88% 2%, #b8cde8 0%, transparent 36%),
+		radial-gradient(circle at 45% 110%, #dff0ff 0%, transparent 34%),
 		var(--bg);
 	line-height: 1.6;
 }
@@ -68,7 +69,7 @@ ul {
 }
 
 .section-alt {
-	background: linear-gradient(180deg, #f2f6fc 0%, #eef3fb 100%);
+	background: linear-gradient(180deg, #dde9f8 0%, #cadcf1 100%);
 }
 
 .center {
@@ -121,7 +122,7 @@ ul {
 .btn-outline {
 	color: var(--primary);
 	border-color: var(--line);
-	background: #fff;
+	background: #ffffff;
 }
 
 .btn-outline:hover,
@@ -135,8 +136,8 @@ ul {
 	top: 0;
 	z-index: 1000;
 	backdrop-filter: blur(8px);
-	background: rgba(247, 249, 252, 0.86);
-	border-bottom: 1px solid rgba(219, 228, 242, 0.8);
+	background: rgba(235, 246, 255, 0.88);
+	border-bottom: 1px solid rgba(207, 224, 241, 0.95);
 }
 
 .navbar {
@@ -161,7 +162,7 @@ ul {
 
 .nav-links a {
 	font-weight: 600;
-	color: #1f2d4d;
+	color: #2b4669;
 	position: relative;
 }
 
@@ -197,7 +198,7 @@ ul {
 .menu-toggle span {
 	width: 22px;
 	height: 2px;
-	background: var(--text);
+	background: #2b4669;
 	border-radius: 2px;
 	transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -252,11 +253,11 @@ ul {
 
 .trust-highlights li {
 	padding: 0.7rem 0.9rem;
-	background: #fff;
+	background: var(--surface);
 	border: 1px solid var(--line);
 	border-radius: var(--radius-sm);
 	font-weight: 600;
-	color: #1e2e4b;
+	color: #2d4a70;
 }
 
 .preview-card {
@@ -370,11 +371,11 @@ ul {
 }
 
 .card {
-	background: #fff;
+	background: var(--surface);
 	border: 1px solid var(--line);
 	border-radius: var(--radius);
 	padding: 1.2rem;
-	box-shadow: 0 8px 18px rgba(15, 23, 42, 0.05);
+	box-shadow: 0 10px 22px rgba(48, 84, 125, 0.1);
 	transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 
@@ -415,6 +416,7 @@ ul {
 	height: 100%;
 	object-fit: cover;
 	border-radius: inherit;
+	border: 4px solid #1f3654;
 	display: block;
 }
 
@@ -427,12 +429,12 @@ ul {
 }
 
 .feature-item {
-	background: #fff;
+	background: var(--surface);
 	border-radius: var(--radius-sm);
 	border: 1px solid var(--line);
 	padding: 0.9rem 1rem;
 	font-weight: 600;
-	color: #223355;
+	color: #2f4f76;
 }
 
 /* Process */
@@ -444,7 +446,7 @@ ul {
 }
 
 .process-step {
-	background: #fff;
+	background: var(--surface);
 	border: 1px solid var(--line);
 	border-radius: var(--radius);
 	padding: 1.2rem;
@@ -456,7 +458,7 @@ ul {
 	border-radius: 50%;
 	display: inline-grid;
 	place-items: center;
-	background: #e7f0ff;
+	background: rgba(87, 168, 234, 0.2);
 	color: var(--primary);
 	font-weight: 800;
 	margin-bottom: 0.8rem;
@@ -471,11 +473,11 @@ ul {
 }
 
 .price-card {
-	background: #fff;
+	background: var(--surface);
 	border: 1px solid var(--line);
 	border-radius: calc(var(--radius) + 2px);
 	padding: 1.4rem;
-	box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+	box-shadow: 0 12px 24px rgba(45, 81, 122, 0.12);
 }
 
 .price-card ul {
@@ -484,7 +486,7 @@ ul {
 
 .price-card li {
 	margin-bottom: 0.55rem;
-	color: #2f3f62;
+	color: #3e5a7c;
 	position: relative;
 	padding-left: 1.15rem;
 }
@@ -510,14 +512,14 @@ ul {
 	display: inline-block;
 	padding: 0.3rem 0.6rem;
 	border-radius: 999px;
-	background: #e5f0ff;
-	color: var(--primary);
+	background: #d9eeff;
+	color: #2e77b5;
 	font-size: 0.75rem;
 	font-weight: 700;
 }
 
 .price-card.featured {
-	border-color: #84aaf0;
+	border-color: #7fb9ea;
 	transform: translateY(-6px);
 }
 
@@ -529,19 +531,19 @@ ul {
 /* Portfolio and testimonials */
 .project-card,
 .testimonial {
-	background: #fff;
+	background: var(--surface);
 	border: 1px solid var(--line);
 	border-radius: var(--radius);
 	overflow: hidden;
-	box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+	box-shadow: 0 10px 22px rgba(48, 84, 125, 0.11);
 }
 
 .project-image {
 	min-height: 170px;
-	background: linear-gradient(135deg, #d9e7ff 0%, #f7faff 100%);
+	background: linear-gradient(135deg, #d9efff 0%, #c8dbee 100%);
 	display: grid;
 	place-items: center;
-	color: #23427d;
+	color: #3b5a81;
 	font-weight: 700;
 }
 
@@ -567,7 +569,7 @@ ul {
 
 .testimonial span {
 	font-size: 0.9rem;
-	color: #556482;
+	color: #5d7697;
 }
 
 /* FAQ */
@@ -582,7 +584,7 @@ ul {
 }
 
 .faq-item {
-	background: #fff;
+	background: var(--surface);
 	border: 1px solid var(--line);
 	border-radius: var(--radius-sm);
 	overflow: hidden;
@@ -595,7 +597,7 @@ ul {
 	text-align: left;
 	font-size: 1rem;
 	font-weight: 700;
-	color: #1a2946;
+	color: #23415f;
 	padding: 1rem 1rem;
 	cursor: pointer;
 	display: flex;
@@ -631,7 +633,7 @@ ul {
 }
 
 .cta-box {
-	background: linear-gradient(130deg, #0d3f98 0%, #245fc8 100%);
+	background: linear-gradient(130deg, #61afea 0%, #87c3f0 100%);
 	color: #fff;
 	border-radius: calc(var(--radius) + 6px);
 	padding: 2.5rem;
@@ -660,7 +662,7 @@ ul {
 
 .audit-note {
 	margin-top: 1.4rem;
-	background: #eff4fc;
+	background: var(--surface-alt);
 	border: 1px solid var(--line);
 	border-radius: var(--radius-sm);
 	padding: 1rem;
@@ -671,7 +673,7 @@ ul {
 }
 
 .contact-form {
-	background: #fff;
+	background: var(--surface);
 	border: 1px solid var(--line);
 	border-radius: var(--radius);
 	box-shadow: var(--shadow);
@@ -687,12 +689,18 @@ ul {
 
 .contact-form input,
 .contact-form textarea {
-	border: 1px solid #c8d6ee;
+	border: 1px solid #c5d9ee;
+	background: #ffffff;
 	border-radius: 10px;
 	padding: 0.75rem 0.85rem;
 	font: inherit;
 	color: var(--text);
 	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+	color: #86a1bf;
 }
 
 .contact-form input:focus,
@@ -709,7 +717,7 @@ ul {
 .form-note {
 	margin: 0.2rem 0 0;
 	font-size: 0.9rem;
-	color: #2d4a84;
+	color: #357fbe;
 }
 
 /* Footer */
@@ -821,7 +829,7 @@ ul {
 		left: 0;
 		right: 0;
 		top: 100%;
-		background: #f7f9fd;
+		background: #ecf6ff;
 		border-bottom: 1px solid var(--line);
 		padding: 0 1.2rem;
 		max-height: 0;
