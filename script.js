@@ -134,7 +134,28 @@ if (contactForm && formNote) {
 			return;
 		}
 
+		event.preventDefault();
 		formNote.textContent = "Submitting...";
+
+		const formData = new FormData(contactForm);
+
+		fetch("/", {
+			method: "POST",
+			headers: { "Content-Type": "application/x-www-form-urlencoded" },
+			body: new URLSearchParams(formData).toString()
+		})
+			.then(() => {
+				formNote.textContent = "Thanks! Your message has been sent. Caleb will get back to you soon.";
+				formNote.style.color = "#2ecc71";
+				formNote.style.fontWeight = "600";
+				contactForm.reset();
+				fields.forEach((field) => field.classList.remove("is-invalid"));
+			})
+			.catch((error) => {
+				console.error("Form submission error:", error);
+				formNote.textContent = "There was an error sending your message. Please try again.";
+				formNote.style.color = "#e74c3c";
+			});
 	});
 }
 

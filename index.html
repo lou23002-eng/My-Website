@@ -488,8 +488,7 @@
 					class="contact-form reveal"
 					name="contact-form-cwc"
 					method="POST"
-					action="/thank-you.html"
-					netlify
+					data-netlify="true"
 					netlify-honeypot="bot-field"
 					novalidate
 				>
@@ -519,7 +518,7 @@
 
 	<!-- Hidden static Netlify fallback forms for bot detection and deploy-time form registration -->
 	<section hidden aria-hidden="true">
-		<form name="contact-form-cwc" method="POST" netlify netlify-honeypot="bot-field">
+		<form name="contact-form-cwc" method="POST" data-netlify="true" netlify-honeypot="bot-field">
 			<input type="hidden" name="form-name" value="contact-form-cwc" />
 			<input type="text" name="name" />
 			<input type="email" name="email" />
