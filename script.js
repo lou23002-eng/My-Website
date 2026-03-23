@@ -122,8 +122,6 @@ if (contactForm && formNote) {
 	});
 
 	contactForm.addEventListener("submit", (event) => {
-		event.preventDefault();
-
 		const hasEmptyField = fields.some((field) => {
 			const empty = !field.value.trim();
 			field.classList.toggle("is-invalid", empty);
@@ -131,12 +129,12 @@ if (contactForm && formNote) {
 		});
 
 		if (hasEmptyField) {
+			event.preventDefault();
 			formNote.textContent = "Please fill out all fields so I can respond with an accurate quote.";
 			return;
 		}
 
-		formNote.textContent = "Thanks for reaching out. I will get back to you soon.";
-		contactForm.reset();
+		formNote.textContent = "Submitting...";
 	});
 }
 
