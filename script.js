@@ -103,7 +103,9 @@ const contactForm = document.querySelector(".contact-form");
 const formNote = document.querySelector(".form-note");
 
 if (contactForm && formNote) {
-	const fields = Array.from(contactForm.querySelectorAll("input, textarea"));
+	const fields = Array.from(contactForm.querySelectorAll("input, textarea")).filter(
+		(field) => field.name !== "bot-field"
+	);
 
 	fields.forEach((field) => {
 		field.addEventListener("blur", () => {
